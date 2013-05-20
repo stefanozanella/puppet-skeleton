@@ -1,13 +1,5 @@
-# Bundler
-/.bundle/
-/bin/
-/bundle/
-/vendor/gems/
-
-# Librarian-Puppet
-/.librarian/
-/.tmp/
-/fixtures/
-
-# Vagrant
-.vagrant
+*.swp
+*.swo
+.DS_Store
+.bundle
+vendor
