@@ -15,3 +15,9 @@ desc "Perform Puppet parser's validation on manifests"
 task :validate do
   Puppet::Face[:parser, '0.0.1'].validate(FileList['**/*.pp'].exclude('vendor/**/*.pp', 'spec/**/*.pp').join())
 end
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.rspec_opts = ['--color']
+  t.pattern = 'spec/**/*_spec.rb'
+end
